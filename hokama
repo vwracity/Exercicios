@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+typedef struct pixel pixel;
+
+struct pixel{
+	int R, G, B;
+}
+
+int main()
+{
+	int n;
+	printf("Insira o tamanho da imagem:\n");
+	scanf("%d", &n);
+	
+	int **imagem = (pixel**)malloc(n*sizeof(pixel*));
+	
+	for(i = 0; i < n; i++)
+	{
+		imagem[i] = (pixel*)malloc(sizeof(pixel));
+	}
+
+	
+	for(i = 0; i < n; i++)
+	{
+		free(imagem[i]);	
+	}	
+	
+	free imagem
+
+	return 0;
+}
